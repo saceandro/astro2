@@ -1,0 +1,14 @@
+set term postscript eps
+set out "graph_orbit.ps"
+set polar
+set size square
+set xrange[-40:40]
+set yrange[-40:40]
+set title "Orbit of planets and Halley's Comet"
+plot "tmp_planet_orbit_calc.dat" u 1:2 title "Earth" w l lt 1,\
+"tmp_planet_orbit_calc.dat" u 1:3 title "Jupiter" w l lt 2,\
+"tmp_planet_orbit_calc.dat" u 1:4 title "Neptune" w l lt 3,\
+"tmp_planet_orbit_calc.dat" u 1:5 title "Halley's Comet" w l lt 4
+set out
+set term x11
+

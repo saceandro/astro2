@@ -1,0 +1,7 @@
+set size square
+set grid polar
+set xrange [-80000:80000]
+set yrange [-80000:80000]
+set zrange [-80000:80000]
+set title "large scale structure of the universe (SDSS)"
+splot "sdss_3d_tmp.dat" u (($1)*cos($2)*cos($3)):(($1)*cos($2)*sin($3)):(($1)*sin($2)) w p ps 0.05 title 'SDSS'

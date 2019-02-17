@@ -1,0 +1,8 @@
+set term postscript eps
+set out "phase_space.ps"
+set title "Phase space of damped oscillation"
+set xlabel "x"
+set ylabel "v"
+plot "gensui_tmp.dat" u 2:3 w l title "damped oscillation"
+set out
+set term x11

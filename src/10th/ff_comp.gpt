@@ -1,0 +1,3 @@
+plot [0:400] -9.80665*x*x/50./50.+x title 'root'
+replot '../9th/ff_tmp.dat' u 2:3 w l title "Euler's method"
+replot 'ff2_tmp.dat' u 2:3 w l title "Runge-Kutta method"

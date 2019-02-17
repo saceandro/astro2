@@ -1,0 +1,9 @@
+set term postscript eps
+set out "2bprob_graph.ps"
+set polar
+set title "Orbit of two-body problem"
+plot "2bprob_tmp.dat" u 1:2 w l title "lighter body",\
+"2bprob_tmp.dat" u 3:4 w l title "heavier body"
+set out
+set term x11
+

@@ -1,0 +1,7 @@
+set size square
+set grid polar
+set xrange [-200:200]
+set yrange [-200:200]
+set zrange [-200:200]
+set title "large scale structure of the universe (zcat)"
+splot "zcat_3d_tmp.dat" u 1:2:3 w p ps 0.7 title 'zcat'

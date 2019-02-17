@@ -1,0 +1,13 @@
+set term postscript enhanced color
+set size square
+set grid polar
+set xrange [-200:200]
+set yrange [-200:200]
+set xlabel '[Mpc]'
+set ylabel '[Mpc]'
+set title "large scale structure of the universe (zcat)"
+set out "zcat_glbstr.ps"
+plot "zcat_trans_tmp.dat" u 1:2 w p ps 0.7 title 'zcat'
+set out
+set term x11
+

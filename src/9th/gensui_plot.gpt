@@ -1,0 +1,9 @@
+set term postscript eps
+set out "gensui_graph.ps"
+set xrange [0:5]
+set xlabel "t"
+set ylabel "x"
+set title "damped oscillation"
+plot "gensui_tmp.dat" u 1:2 w l title "damped oscillation"
+set out
+set term x11

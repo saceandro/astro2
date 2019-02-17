@@ -1,0 +1,7 @@
+set term postscript eps
+set out 'orbitode_graph.ps'
+set polar
+set title 'orbit'
+plot 'orbitode_tmp.dat' u 1:2 w l
+set out
+set term x11

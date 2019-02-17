@@ -1,0 +1,10 @@
+set size square
+set xrange [0:1.1]
+set yrange [-1.5:1.0]
+set xlabel "t"
+set ylabel "E"
+set nokey
+i = 0
+imax = 100000
+interval = 0.01
+load "energy_sub.gpt"

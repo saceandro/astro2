@@ -1,0 +1,2 @@
+set xrange [0:2*pi]
+plot 'odecos_tmp.dat' u 1:2 w l lt 1 title 'ode', sin(x) w l lt 2 title 'sin(x)'

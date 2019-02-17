@@ -1,0 +1,16 @@
+set term postscript eps enhanced
+set out "universe_graph.ps"
+set xrange [0:8]
+set title "Evolution of the universe"
+set xlabel 'T'
+set ylabel 'A'
+set key left top
+set parametric
+plot (sinh(t)-t)/sqrt(2.),(cosh(t)-1.)/2. w l lt 4 title 'analytic solution when {/Symbol W}_0 = 0.5',\
+t,(3.*t/2.)**(2./3.) w l lt 5 title 'analytic solution when {/Symbol W}_0 = 1  ',\
+t-sin(t),1-cos(t) w l lt 6 title 'analytic solution when {/Symbol W}_0 = 2  ',\
+"universe0point5.dat" u 1:2 w l lt 1 ti "numerical solution when {/Symbol W}_0 = 0.5",\
+"universe1.dat" u 1:2 w l lt 2 ti "numerical solution when {/Symbol W}_0 = 1  ",\
+"universe2.dat" u 1:2 w l lt 3 ti "numerical solution when {/Symbol W}_0 = 2  "
+set out 
+set term x11

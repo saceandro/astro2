@@ -1,0 +1,2 @@
+set xrange [0:5]
+plot exp(-x)*sin(3.*x)/3. w l title 'root', "gensui_tmp.dat" u 1:2 w l title 'numresult'

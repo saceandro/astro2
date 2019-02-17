@@ -1,0 +1,10 @@
+set size square
+set xrange [-0.5:1.5]
+set yrange [-0.5:1.5]
+set xlabel "x"
+set ylabel "y"
+set nokey
+i = 0
+imax = 100000
+interval = 0.01
+load "sb_plot_sub.gpt"

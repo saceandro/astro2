@@ -1,0 +1,13 @@
+set term postscript eps
+set logscale x 10
+set logscale y 10
+set title "Accuracy of numerical integration method"
+set xlabel "N"
+set ylabel "absolute value of the relative error (fabs(numresult/e -1.))"
+set output "graph_napier_error.ps"
+plot "tmp_simpsonrule.dat" u 1:2 title "Simpson's rule" w l,\
+"tmp_simpsonrule.dat" u 1:2 notitle w p,\
+"tmp_nepia.dat" u 1:2 title "Trapezoidal rule" w l,\
+"tmp_nepia.dat" u 1:2 notitle w p
+set out
+set term x11

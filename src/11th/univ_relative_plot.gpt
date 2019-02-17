@@ -1,0 +1,12 @@
+set term postscript eps enhanced
+set out "univ_relative_graph.ps"
+set xlabel "T"
+set ylabel "A"
+set xrange [0:3]
+set title "Evolution of the universe"
+plot "omega.dat" u 1:2 w l ti "relativistic model when {/Symbol W}m0 = 0.272 and {/Symbol W}{/Symbol L}0 = 0.728",\
+"../10th/universe0point5.dat" u 1:2 w l ti "Newton model when {/Symbol W}_0 = 0.5",\
+"../10th/universe1.dat" u 1:2 w l ti "Newton model when {/Symbol W}_0 = 1  ",\
+"../10th/universe2.dat" u 1:2 w l ti "Newton model when {/Symbol W}_0 = 2  "
+set out
+set term x11

@@ -1,0 +1,11 @@
+set term postscript enhanced color
+set xrange [-0.5:2.5]
+set yrange [20:-15]
+set xlabel "B-V"
+set ylabel "Mv"
+set title "H-R diagram"
+set out "graph_hr.ps"
+plot "tmp_absolutemagnitude_hipparcos.dat" w p ps 0.1,\
+"tmp_absolutemagnitude.dat" w p pt 1
+set out
+set term x11 

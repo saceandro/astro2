@@ -1,0 +1,9 @@
+set term postscript eps
+set out 'euler_graph.ps'
+set logscale
+set title "Accuracy of Euler's method"
+set xlabel 'n'
+set ylabel 'absolute value of the relative error (fabs(numresult/e - 1.))'
+plot 'euler_tmp.dat' u 1:2 w l title "Euler's method",'euler_tmp.dat' u 1:2 w p notitle
+set out
+set term x11

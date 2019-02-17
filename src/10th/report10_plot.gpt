@@ -1,0 +1,8 @@
+set term postscript eps enhanced
+set out "report10_graph.ps"
+set title "Orbit"
+set polar
+set grid polar
+plot "report10_tmp.dat" u 1:2 w l ti "orbit"
+set out
+set term x11

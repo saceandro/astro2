@@ -1,0 +1,2 @@
+set xrange [0:5]
+plot exp(-x)*sin(3.*x)/3. w l

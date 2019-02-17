@@ -1,0 +1,7 @@
+set title "H-R diagram"
+set xrange [0.6:0.7]
+set yrange [5:3.5]
+set xlabel "B-V"
+set ylabel "Mv"
+plot "../6th/tmp_absolutemagnitude_hipparcos.dat" u 1:2 title "hipparcos stars" w p ps 0.1,\
+"tmp_ngc188_transform.dat" u 1:2 title "NGC 188" w p pt 3

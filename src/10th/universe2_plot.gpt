@@ -1,0 +1,10 @@
+set term postscript eps enhanced
+set out "universe2_graph.ps"
+set xrange [0:8]
+set title "Evolution of the universe"
+set xlabel 'T'
+set ylabel 'A'
+set parametric
+ome = 0.5
+plot (sinh(t)-t)*ome/2./(1.-ome)**(3./2.),(cosh(t)-1.)*ome/2./(1.-ome) w l lt 2 ti "analytic solution",\
+"universe_tmp.dat" u 1:2 w l lt 1 ti "numerical solution"

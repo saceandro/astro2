@@ -1,0 +1,6 @@
+plot "sb_tmp.dat" every ::i::i u 2:3 w p ps 1 pt 6 lt 1,\
+"sb_tmp.dat" every ::i::i u 4:5 w p ps 2.5 pt 6 lt 3,\
+"sb_tmp.dat" every 100::0::i u 2:3 w l lt 1,\
+"sb_tmp.dat" every 100::0::i u 4:5 w l lt 3
+if (i < imax) i=i+2000; pause interval; reread
+exit

@@ -1,0 +1,10 @@
+set term postscript enhanced color
+set size square
+set grid polar
+set xrange [-80000:80000]
+set yrange [-80000:80000]
+set title "large scale structure of the universe (SDSS)"
+set out "sdss_glbstr.ps"
+plot "sdss_trans_tmp.dat" u 1:2 w p ps 0.05 title 'SDSS'
+set out
+set term x11

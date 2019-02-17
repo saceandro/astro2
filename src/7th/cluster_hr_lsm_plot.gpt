@@ -1,0 +1,21 @@
+set term postscript enhanced color
+set out "cluster_hr_lsm.ps"
+f(x)=-a*x+b
+fit f(x) "tmp_hipparcos20pc.dat" u 1:2 via a,b
+g(x)=-a*x+c
+fit g(x) "tmp_cluster_transform.dat" u 1:2 via c
+set title "H-R diagram"
+set xrange [-0.5:2.5]
+set yrange [20:-5]
+set xlabel "B-V"
+set ylabel "Mv(V)"
+set label 1 "a=%g", a at 2,0
+set label 2 "b=%g", b at 2,1
+set label 3 "c=%g", c at 2,2
+plot "tmp_hipparcos20pc.dat" u 1:2 title "hipparcos stars within 20[pc]" \
+w p pt 7 ps 0.2, \
+f(x) title "Y=aX+b" w l, \
+"tmp_cluster_transform.dat" u 1:2 title "cluster" w p pt 1, \
+g(x) title "Y=aX+c" w l
+set out
+set term x11
